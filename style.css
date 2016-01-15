@@ -64,8 +64,6 @@ body {
 
 #searchBar {
   margin: 15px 10px;
-  
-
 }
 
 .tableWrapper {
@@ -76,8 +74,53 @@ body {
 .jumbotron {
 	background-color: rgba(0, 103, 255, .5);
 	margin-top: 63px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.jumbotron p {
+	padding-top: 15px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	font-size: 20px;
 }
 
 .table-striped tr{
 	background-color: rgba(0, 103, 255, .6);
+}
+
+.add-listing-wrapper {
+	background-color: rgba(0, 103, 255, .5);
+	width: em;
+	height: 325px;
+	margin-top: 0px;
+	padding: 20px 60px;
+}
+
+.parameter-wrapper div{
+	font-size: 20px;
+	padding-top: 10px;
+}
+
+.parameter-wrapper input{
+	margin-top: 3px;
+	background-color: rgba(0, 103, 255, 0);
+	border: 1.4px solid black;
+}
+
+#addListingButton {
+	margin-top: 10px;
+}
+
+#DI_Title{
+	font-size: 35px;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+#AL_Title {
+	font-size: 35px;
 }

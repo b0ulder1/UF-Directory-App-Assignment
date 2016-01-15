@@ -13,47 +13,47 @@
         <div class="col-md-6">
           <div class="input-group" id="searchBar">
             <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search"></span></span>
-            <input type="text" class="form-control" placeholder="Search" ng-model="searchingBar" style="background-color:rgba(255, 255, 255, .8)">
+            <input type="text" class="form-control" placeholder="Search" ng-model="searchingBar" style="background-color:rgba(0, 103, 255, .6)">
           </div>
           <div class="tableWrapper">
             <table class="table table-striped">
               <tr>
-                <th>Code</th>
-                <th>Building Name</th>
+                <th style="font-family:Courier">Code</th>
+                <th style="font-family:Courier">Building Name</th>
                 <th></th>
                 <th></th>
               </tr>
               <tr ng-repeat="listing in listings | filter:searchingBar | orderBy: 'code'">
                 <td>{{listing.code}}</td>
                 <td>{{listing.name}}</td>
-                <td><button ng-click="showDetails(listing)">Show Details</button></td>
-                <td><button ng-click="deleteListing(listing)">Remove</button></td>
+                <td><button class="btn btn-info" ng-click="showDetails(listing)">Details</button></td>
+                <td><button class="btn btn-danger" ng-click="deleteListing(listing)">Remove</button></td>
               </tr>
             </table>
           </div>
         </div>
         <div class="col-md-6">
           <div class="jumbotron" ng-init="showDetails(listings[0])">
-            <h2>Detailed Information</h2>
-            <h3>Building: {{nam}}</h3>
+            <h2 id="DI_Title">Detailed Information</h2>
+            <p>Building: {{nam}}</p>
             <p>Address: {{add}}</p>
             <p>Latitude: {{lat}}</p>
             <p>Longitude: {{longit}}</p>
           </div>
-          <div class="add-listing-wrapper">
-        <h4>Add Listing Here:</h4>
+      <div class="add-listing-wrapper jumbotron">
+        <h4 id="AL_Title">Add Listing</h4>
          <div class="parameter-wrapper">
           <div>Building Code: </div>
-            <input type="text" class="add-listing-control" placeholder="Code" ng-model="newItem1">
+            <input type="text" placeholder="Code" ng-model="newItem1">
           <div>Building Name: </div>
-            <input type="text" class="add-listing-control" placeholder="Name" ng-model="newItem2">
+            <input type="text" placeholder="Name" ng-model="newItem2">
           <div>Building Address: </div>
-            <input type="text" class="add-listing-control" placeholder="Address" ng-model="newItem3">
+            <input type="text" placeholder="Address" ng-model="newItem3">
           <div>Building Coordinates: </div>
-            <input type="text" class="add-listing-control" placeholder="Latitude" ng-model="newItem4">
-            <input type="text" class="add-listing-control" placeholder="Longitude" ng-model="newItem5">
+            <input type="text" placeholder="Latitude" ng-model="newItem4">
+            <input type="text" placeholder="Longitude" ng-model="newItem5">
          </div>
-        <div><button ng-click="addListing()">Add Listing</button></div>
+        <div><button id="addListingButton" class="btn btn-success glyphicon glyphicon-check" ng-click="addListing()"></button></div>
       </div>
         </div>
       </div>
